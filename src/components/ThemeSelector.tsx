@@ -1,7 +1,4 @@
-import { Moon, Sun } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/providers/ThemeProvider";
 
 const Val = [
   { icon: "/Bell.svg", label: "Notification" },
@@ -10,8 +7,6 @@ const Val = [
 ];
 
 export function AppThemeToggle() {
-  const { setTheme } = useTheme();
-
   return (
     <div className="flex items-center gap-6 justify-center">
       <Button className="text-white px-6 bg-[#0D6EFD] font-poppins">

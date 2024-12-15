@@ -1,5 +1,4 @@
 import { ArrowRight, Calendar } from "lucide-react";
-import React from "react";
 
 const DashboardHeader = () => {
   return (

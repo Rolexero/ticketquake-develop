@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useModalState } from "@/hooks/useModalState";
 import React from "react";
 import ReusableModal from "./Modal/SearchFlightModal";
@@ -23,8 +22,7 @@ const TripDetails = [
   },
 ];
 const TripCards = () => {
-  const { isOpen, toggleIsOpen, closeModal, openModal, setIsOpen } =
-    useModalState();
+  const { isOpen, closeModal, openModal } = useModalState();
 
   return (
     <React.Fragment>

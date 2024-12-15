@@ -1,7 +1,4 @@
-import BalanceCard from "./Components/BalanceCard";
 import Page from "@/components/page";
-import RecentOrders from "./Components/RecentOrders";
-import PostProductCard from "./Components/PostTicketCard";
 import DashboardHeader from "./Components/DashboardHeader";
 import DashboarddDetails from "./Components/DashboarddDetails";
 

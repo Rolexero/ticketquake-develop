@@ -1,6 +1,6 @@
 import { Clapperboard, Luggage, Plane, Usb, Utensils } from "lucide-react";
 
-const FlightCard = ({ val, handleDelete }: any) => {
+const HotelsCard = ({ val, handleDelete }: any) => {
   return (
     <div>
       <div className="flex bg-white rounded-[8px] justify-between h-full  ">
@@ -121,4 +121,4 @@ const FlightCard = ({ val, handleDelete }: any) => {
   );
 };
 
-export default FlightCard;
+export default HotelsCard;

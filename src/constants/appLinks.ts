@@ -1,16 +1,12 @@
 import {
-  ArrowRightLeft,
   BriefcaseMedical,
   Building2,
   GraduationCap,
-  Home,
   Luggage,
   Newspaper,
   Package,
   Plane,
-  Settings,
   TrafficCone,
-  WashingMachine,
 } from "lucide-react";
 
 export const appLinks = [

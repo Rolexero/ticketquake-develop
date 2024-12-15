@@ -2,7 +2,6 @@
 
 import { CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
   Select,
@@ -11,12 +10,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import axiosInstance from "@/service/axios";
-import { fetchFlights, fetchLocation } from "@/service/request";
+import { fetchFlights } from "@/service/request";
 import { useQuery } from "@tanstack/react-query";
-import { Form, useFormik } from "formik";
+import { useFormik } from "formik";
 import { SearchFlightProps } from "../../utils";
-import { useToast } from "@/components/ui/use-toast";
 
 interface ReusableModalProps {
   isOpen: boolean;
@@ -50,7 +47,7 @@ export default function ReusableModal({
       validateOnChange: false,
       onSubmit(values: SearchFlightProps) {
         refetch();
-        // console.log(values);
+        console.log(values);
       },
     });
 

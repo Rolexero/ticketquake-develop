@@ -1,4 +1,5 @@
 import FlightsItinerary from "./FlightsItinerary";
+import HotelsItinerary from "./HotelsItinerary";
 import TripCards from "./TripCards";
 
 const DashboarddDetails = () => {
@@ -14,6 +15,10 @@ const DashboarddDetails = () => {
       </div>
       <div className="mt-[24px]">
         <FlightsItinerary />
+      </div>
+
+      <div className="mt-[24px]">
+        <HotelsItinerary />
       </div>
     </div>
   );
