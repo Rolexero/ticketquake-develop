@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// @ts-ignore
+// eslint-disable-next-line no-undef
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -15,12 +17,6 @@ module.exports = {
       screens: {
         container: "1440px",
         "2xl": "1400px",
-      },
-    },
-    container: {
-      center: true,
-      screens: {
-        "2xl": "1440px",
       },
     },
     extend: {
@@ -92,5 +88,4 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
 };
