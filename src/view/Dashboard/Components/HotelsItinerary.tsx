@@ -47,7 +47,7 @@ const HotelsItinerary = () => {
                 btnAction={() => {
                   //   openModal();
                 }}
-                title={"Add Flights"}
+                title={"Add Hotels"}
                 icon={
                   <Plane
                     width={70}
