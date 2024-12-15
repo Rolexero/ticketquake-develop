@@ -5,28 +5,13 @@ import ProfileDropdown from "@/components/ProfileDropdown";
 
 import DashboardSideNav from "@/components/dashboardSideNav";
 import Dashboard from "@/view/Dashboard";
-import Transactions from "@/view/Transactions";
 import { RouteObject } from "react-router-dom";
-import Login from "@/view/Login";
-import CreateAccount from "@/view/CreateAccount";
 import { AppThemeToggle } from "@/components/ThemeSelector";
-import TransactionDetails from "@/view/TransactionDetails";
 import TabLayout from "@/components/ProductLayout";
-import Products from "@/view/Products";
-import PostProduct from "@/view/PostProduct";
 import { productLinks } from "@/constants/tabLinks";
 import SettingsWrapper from "@/components/SettingsWrapper";
-import Profile from "@/view/Profile";
 
 const routes: RouteObject[] = [
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/create-account",
-    element: <CreateAccount />,
-  },
   {
     path: "/",
     element: (
@@ -49,33 +34,12 @@ const routes: RouteObject[] = [
       {
         path: "/products",
         element: <TabLayout title="Products" links={productLinks} />,
-        children: [
-          {
-            index: true,
-            element: <Products />,
-          },
-          {
-            path: "post",
-            element: <PostProduct />,
-          },
-        ],
-      },
-      {
-        path: "/transactions",
-        element: <Transactions />,
-      },
-      {
-        path: "/transactions/:id",
-        element: <TransactionDetails />,
+        children: [],
       },
       {
         path: "/settings",
         element: <SettingsWrapper />,
         children: [
-          {
-            path: "",
-            element: <Profile />,
-          },
           {
             path: "store",
             element: <div>Store</div>,

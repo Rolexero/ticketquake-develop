@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { useModalState } from "@/hooks/useModalState";
 import React from "react";
+import ReusableModal from "./Modal/SearchFlightModal";
 const TripDetails = [
   {
     title: "Activities",
@@ -14,15 +16,18 @@ const TripDetails = [
     btnTitle: "Add Hotels",
   },
   {
-    title: "Hotels",
+    title: "Flight",
     details:
       "Build, personalize, and optimize your itineraries with our trip planner.",
     btnTitle: "Add Flights",
   },
 ];
 const TripCards = () => {
+  const { isOpen, toggleIsOpen, closeModal, openModal, setIsOpen } =
+    useModalState();
+
   return (
-    <div>
+    <React.Fragment>
       <div className="flex gap-3">
         {TripDetails?.map((data, id) => {
           return (
@@ -46,6 +51,11 @@ const TripCards = () => {
               </div>
 
               <button
+                onClick={() => {
+                  if (id == 2) {
+                    openModal();
+                  }
+                }}
                 className={`font-poppins mt-6 p-3 rounded font-medium   text-base ${
                   id == 2
                     ? "bg-[#FFF] text-[#0D6EFD]"
@@ -58,7 +68,12 @@ const TripCards = () => {
           );
         })}
       </div>
-    </div>
+      <ReusableModal
+        isOpen={isOpen}
+        onClose={closeModal}
+        title="Search for Flight"
+      />
+    </React.Fragment>
   );
 };
 
