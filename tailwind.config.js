@@ -1,7 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-// @ts-ignore
-// eslint-disable-next-line no-undef
-module.exports = {
+export default {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
